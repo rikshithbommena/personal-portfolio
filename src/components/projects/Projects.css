@@ -1,0 +1,209 @@
+.projectsSection {
+    min-height: 100vh;
+}
+
+.mainHeadingInProject {
+    color: var(--primary-color);
+    position: relative;
+}
+
+.mainHeadingInProject::after {
+    content: '';
+    position: absolute;
+    background: var(--text-light);
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+}
+
+.projectImage {
+    max-height: 200px;
+    max-width: 400px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.projectCard:hover {
+    transform: translateY(-5px) !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-category-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.projectCard:hover .overlay {
+    opacity: 1;
+}
+
+.modal-image {
+    display: block;
+    margin: auto;
+    max-width: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (min-width:576px) {
+    .modal-image {
+        max-width: 650px;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Microsoft Store Shine Effect for Project Cards */
+/*.projectCard {
+    background: #0067b8 !important;
+    border: none !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    cursor: pointer !important;
+}
+
+.projectCard:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 10px 25px rgba(0, 103, 184, 0.3) !important;
+}
+*/
+/* Shine effect overlay */
+/*.projectCard::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(
+        120deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(255, 255, 255, 0.6) 55%,
+        rgba(255, 255, 255, 0.4) 60%,
+        transparent 70%
+    ) !important;
+    transform: skewX(-25deg) !important;
+    transition: left 2s ease-out !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+}
+
+.projectCard:hover::before {
+    left: 100% !important;
+}
+*/
+/* Adjust text colors for better contrast on blue background */
+/*.projectCard .card-body {
+    position: relative !important;
+    z-index: 2 !important;
+    color: white !important;
+}
+
+.projectCard .card-body h5 {
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+.projectCard .card-body p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+*/
+/* Style badges for better visibility */
+/*.projectCard .badge {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+.projectCard .badge.bg-secondary {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+}
+*/
+/* Ensure image maintains proper styling */
+/*.projectCard .projectImage {
+    border-radius: 4px !important;
+    transition: transform 0.3s ease !important;
+}
+
+.projectCard:hover .projectImage {
+    transform: scale(1.02) !important;
+}
+*/
+/* Card header styling */
+/*.projectCard .card-header {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+*/
+/* Optional: Add a subtle inner glow effect */
+/*.projectCard::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.05) 100%
+    ) !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+}
+*/
+/* Ensure all content is above the shine effect */
+/*.projectCard > * {
+    position: relative !important;
+    z-index: 2 !important;
+}
+*/

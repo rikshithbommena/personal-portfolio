@@ -1,0 +1,79 @@
+.contacts-section{
+    min-height: 100vh;
+}
+
+.main-heading-in-contacts{
+    color: var(--primary-color);
+    position:relative;
+}
+
+.main-heading-in-contacts::after{
+    content: '';
+    position:absolute;
+    bottom:-10px;
+    left:50%;
+    transform: translate(-50%);
+    background: var(--text-light);
+    width:100px;
+    height:3px;
+
+}
+
+.contact-card{
+    box-shadow:4px 4px 12px rgba(0, 0, 0, 0.230);
+    border-radius:6% !important;
+    border-radius: 20px 20px 20px 20px !important;
+}
+
+.contact-icon{
+    font-size: 2rem;
+    background-color: var(--primary-color);
+    color:white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-card:hover{
+    box-shadow:4px 4px 12px rgba(0, 0, 0, 0.568) !important;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.message-card{
+    border-radius: 20px 20px 20px 20px !important;
+}
+
+.submit-button{
+    background-color: #ff6b6b !important;
+    color: white !important;
+    border-radius: 20px 20px 20px 20px !important;
+}
+
+/* spinner */
+.spin{
+    animation: spinner 0.8s linear infinite;
+}
+
+@keyframes spinner{
+0%{
+    transform: rotate(0deg);
+}
+100%{
+    transform: rotate(360deg);
+}
+}
+
+.socialLink{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.socialLink:hover{
+    transform: translateY(-5px) !important;
+}

@@ -1,0 +1,28 @@
+/* importing fonts from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 
+.nav-parent{
+    position: static !important;
+} */
+
+.navigation {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.200);
+    background: rgba(255, 255, 255, 0.95) !important;
+}
+
+.navbar-brand {
+    font-family: "Noto Serif", serif;
+    font-weight: 800;
+    font-style: oblique;
+    font-size: 1.5rem !important;
+    color: var(--primary-color) !important;
+    margin-left:10px;
+}
+
+.navbar .nav-link {
+    font-weight: 500;
+    margin: 0 0.5rem;
+    color: var(--dark-color) !important;
+    transition: all 0.3s ease;
+}

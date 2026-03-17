@@ -1,0 +1,82 @@
+/* google fonts imports */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* home */
+#home {
+    min-height: 100vh;
+    background: var(--gradient-bg);
+    display: flex;
+    align-items: center;
+}
+
+/* intro styling */
+.intro {
+    font-size: 3rem;
+    color: var(--light-color);
+    font-family: "Libre Baskerville", serif;
+    font-style: bold;
+    font-weight: 400;
+}
+
+/* adding media query */
+@media screen and (max-width:777px){
+    .intro{
+        font-size:2rem;
+    }
+}
+
+.introName {
+    text-transform: capitalize;
+    color: var(--secondary-color);
+}
+
+.introRole {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    font-family: "Work Sans", sans-serif;
+}
+
+.introPara {
+    /* width: 50%; */
+    color: var(--light-color);
+    font-size: 1.1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 1.5px;
+}
+
+.intro-profile-picture {
+    border-radius: 50% !important;
+    width: 100%;
+    max-width:250px;
+    height: 100%;
+    max-height:250px;
+    box-shadow: 3px 3px 16px #333c4d;
+}
+
+/* buttons animations */
+.view-my-work-btn, .download-resume-btn{
+    border-radius:20px 20px 20px 20px !important;
+}
+
+.view-my-work-btn:hover, .download-resume-btn:hover{
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+    box-shadow:4px 4px 12px black;
+}
+
+.intro-profile-picture{
+    animation: floatAnimation 6s ease-in-out infinite;
+}
+
+@keyframes floatAnimation{
+    0%,100%{
+        transform: translate(0px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+}

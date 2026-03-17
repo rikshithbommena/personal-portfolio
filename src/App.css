@@ -1,0 +1,33 @@
+
+/* custom css variables for colours */
+:root {
+  --primary-color: #1e3a8a;
+  /* Deep Royal Blue "Main headings, links, strong elements"  */
+  --secondary-color: #22d3ee;
+  /* Cool Mint Blue "Hover effects, highlights" */
+  --accent-color: #f97316;
+  /* Vibrant Orange (for buttons) "Buttons, important action" */
+  --dark-color: #0f172a;
+  /* Deep Navy (text/dark bg) "Main text or dark background" */
+  --light-color: #f1f5f9;
+  /* Soft Light Gray (bg) "Background, cards, navbar" */
+  --gradient-bg: linear-gradient(135deg, #1e3a8a 0%, #22d3ee 100%);
+  /* "Hero section background" */
+  --text-light: #64748b;
+  /* Muted Slate "Light text in dark areas or muted notes" */
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+position: static;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}

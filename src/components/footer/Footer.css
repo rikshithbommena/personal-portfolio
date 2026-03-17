@@ -1,0 +1,17 @@
+.footer{
+    background-color: #212833;
+}
+.footer-section{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.social-links{
+    font-size: 1.7rem;
+}
+
+.social-icon:hover{
+    transition: all 0.3s ease-in-out !important;
+    transform: translateY(-5px) !important;
+}

@@ -1,0 +1,68 @@
+/* google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+.aboutMeSection{
+    background-color: var(--light-color);
+}
+
+.about-content{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+}
+
+.aboutMeHeading{
+    text-align: center;
+    font-size:2rem;
+    color:var(--primary-color);
+    font-weight:bold;
+    position: relative;
+}
+
+.aboutMeHeading::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--text-light);
+  border-radius: 2px;
+}
+
+.aboutMeImage{
+    box-shadow: 8px 4px 16px #333c4d;
+    border-radius:20% !important;
+}
+
+.about-info h4{
+    font-size: 1.8rem;
+}
+
+.about-info p{
+    font-weight:500;    
+}
+li{
+    margin-bottom: 8px;
+    font-family:"Open Sans", sans-serif;
+}
+
+.card{
+    box-shadow:4px 4px 12px rgba(0, 0, 0, 0.230);
+    border-radius:6% !important;
+    background-color: #ffff;
+
+}
+.card-img-top{
+    font-size: 2.5rem;
+    color:var(--primary-color)
+}
+
+.card:hover{
+    box-shadow:4px 4px 12px rgba(0, 0, 0, 0.568);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+
+}
