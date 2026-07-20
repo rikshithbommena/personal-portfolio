@@ -7,6 +7,12 @@ import { FaRegEye, FaGithub } from "react-icons/fa";
 import { ImShare } from "react-icons/im";
 
 // importing images
+import uberDashboard from '../../assets/uber-dashboard.png';
+import uberAuto from '../../assets/vehicle-auto.png';
+import uberBike from '../../assets/vehicle-bike.png';
+import uberMiniSedan from '../../assets/vehicle-mini-sedan.png';
+import uberPremiumSedan from '../../assets/vehicle-premium-sedan.png';
+import uberTruck from '../../assets/vehicle-truck.png';
 import project1_1 from '../../assets/project-1.1.png';
 import project1_2 from '../../assets/project-1.2.png';
 import project1_3 from '../../assets/project-1.3.png';
@@ -28,8 +34,30 @@ function Projects() {
 
   const projects = [
     {
-      id: 1,
-      title: 'Chocolate-Industry-Analysis',
+  id: 1,
+  title: 'Uber Ride Analytics Dashboard',
+  description:
+    'Interactive Power BI dashboard analyzing Uber bookings, revenue, cancellations, vehicle performance, and customer insights with dynamic filtering.',
+  image: uberDashboard,
+  technologies: ['Power BI','SQL','DAX','Excel'],
+  githubUrl: 'https://github.com/rikshithbommena/Uber-Operations-Dashboard',
+  datasetUrl: 'https://github.com/rikshithbommena/Uber-Operations-Dashboard',
+  category: 'Data Analysis',
+  longDescription:
+    'Designed and developed an interactive Uber Ride Analytics Dashboard using Power BI. The dashboard includes dynamic vehicle selection with image switching, KPI cards, booking trends, revenue analysis, cancellation insights, customer and driver ratings, and bookmark-based navigation.',
+
+  multipleImages: [
+    uberDashboard,
+    uberAuto,
+    uberBike,
+    uberMiniSedan,
+    uberPremiumSedan,
+    uberTruck
+  ]
+},
+    {
+      id: 2,
+      title: 'Chocolate Industry Analysis',
       description: 'End-to-end analysis of chocolate shipment data to identify sales trends, shipment performance, and regional demand using data cleaning, EDA, and dashboards.',
       image: project1_3,
       technologies: ['SQL', 'Python', 'Power Bi','Excel'],
@@ -40,8 +68,8 @@ function Projects() {
       multipleImages: [ project1_3]
     },
     {
-      id: 2,
-      title: 'Farmers-Market-Analysis',
+      id: 3,
+      title: 'Farmers Market Analysis',
       description: 'Analysis of e-commerce sales data to track revenue, customer behavior, and product performance using SQL queries and interactive dashboards.',
       image: project2_2,
       technologies: ['Excel', 'Python', 'Power Bi','SQL'],
@@ -52,8 +80,8 @@ function Projects() {
       multipleImages: [ project2_2]
     },
     {
-      id: 3,
-      title: 'Twitter-Sentiment-Analysis',
+      id: 4,
+      title: 'Twitter Sentiment Analysis',
       description: 'Analyzes tweets to identify sentiment trends and factors affecting engagement, providing insights into how emotions and context influence social media interactions.',
       image: project3_1,
       technologies: ['Python ', 'Machine Learning','EDA', 'Scikit-learn for NLP & sentiment scoringp'],
@@ -63,18 +91,8 @@ function Projects() {
       longDescription: 'The goal is to analyze sentiment trends, identify factors influencing tweet popularity, and extract insights based on the language, time, and engagement metrics of tweets. This helps in understanding how emotions propagate on social platforms and how they vary with context.',
       multipleImages: [project3_1]
     },
-    // {
-    //   id: 4,
-    //   title: 'eVote – Online Voting System using PHP & MySQL',
-    //   description: 'An online voting system built with PHP and MySQL on XAMPP. Users can register, log in, and cast votes securely through the web.',
-    //   image: project4_3,
-    //   technologies: ['Html', 'css', 'Bootstrap', 'Php', 'Xampp', 'Mysql'],
-    //   githubUrl: 'https://github.com/Varun-Ravula/Online-Voting-System',
-    //   datasetUrl: '',
-    //   category: 'Full Stack',
-    //   longDescription: 'A comprehensive e-commerce platform featuring user authentication, product catalog, shopping cart, payment integration with Stripe, order management, and admin dashboard. Built with modern technologies and following best practices.',
-    //   multipleImages: [project4_1, project4_2, project4_3]
-    // }
+    
+
   ]
   // use state for storing selected category
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -94,7 +112,7 @@ function Projects() {
   // handle modal
   const handleModal = (project) => {
     setSelectedProject(project);
-    setShowModal(true);
+    setShowModal(true)
   }
 
   return (
