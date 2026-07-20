@@ -1,15 +1,17 @@
 // importing modules
-import React from 'react'
+import React, { useState } from 'react';
 import './Home.css';
 import { Row, Col } from 'react-bootstrap';
 import { ReactTyped } from 'react-typed';
 import { ToastContainer, toast } from 'react-toastify';
+import profileImage from '../../assets/profile.png';
 
 // importing react icons
 import { FaRegEye } from "react-icons/fa";
 import { RiDownloadFill } from "react-icons/ri";
 
 function Home() {
+  const [showImage, setShowImage] = useState(false);
 
   // creating function for disabling right click
   const handleToast = () => {
@@ -46,11 +48,32 @@ function Home() {
           </div>
         </Col>
         <Col lg={6}>
-          <div className="align-items-center" data-aos="fade-left" data-aos-delay="300">
-            <img src="https://res.cloudinary.com/dm6pgp5lt/image/upload/v1772632435/profile_photo_4_rqgzcb.jpg" alt="rikshith bommena" className="intro-profile-picture d-block m-auto mt-1" onContextMenu={handleContext} onClick={handleToast} />
+          <div
+  className="d-flex justify-content-end"
+  data-aos="fade-left"
+  data-aos-delay="300"
+>
+            <img
+    src={profileImage}
+    alt="Rikshith Bommana"
+    className="intro-profile-picture"
+    onClick={() => setShowImage(true)}
+/>
           </div>
         </Col>
       </Row>
+    {showImage && (
+  <div
+    className="image-modal"
+    onClick={() => setShowImage(false)}
+  >
+    <img
+      src={profileImage}
+      alt="Profile"
+      className="image-modal-content"
+    />
+  </div>
+)}
     </div>
   )
 }

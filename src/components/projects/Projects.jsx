@@ -133,8 +133,8 @@ function Projects() {
           <Row>
             {/* card */}
             {fliteredProjects.map((project, index) => (
-              <Col lg={4} md={4} sm={6} key={index} className='m-auto'>
-                <div className='card p-3 m-2 projectCard' data-aos="fade-up" data-aos-delay={index * 100}>
+              <Col lg={4} md={4} sm={6} key={index} className="m-auto">
+                <div className="card p-3 m-2 projectCard">
                   <div className="card-header card-image-wrapper">
                     <img src={project.image} alt={project.title} onError={(e) => e.target.src = defaultProjectImage} className='projectImage' />
                     <div className="overlay">
