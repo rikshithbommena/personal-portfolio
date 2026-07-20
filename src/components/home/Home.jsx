@@ -40,11 +40,15 @@ function Home() {
             </p>
             <div>
               <a href="#projects"><button className="btn btn-warning view-my-work-btn p-2 me-2 text-capitalize mb-3"><FaRegEye /> view my work</button></a>
-<a href="/personal-portfolio/Rikshith_Resume.pdf" download>
+<a
+  href={`${import.meta.env.BASE_URL}Rikshith_Resume_2026.pdf`}
+  target="_blank"
+  rel="noopener noreferrer"
+>
   <button className="btn btn-danger p-2 download-resume-btn mb-3">
     <RiDownloadFill /> Download Resume
   </button>
-</a>            </div>
+</a>           </div>
           </div>
         </Col>
         <Col lg={6}>
