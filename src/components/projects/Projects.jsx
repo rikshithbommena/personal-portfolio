@@ -6,7 +6,14 @@ import { useState } from 'react';
 import { FaRegEye, FaGithub } from "react-icons/fa";
 import { ImShare } from "react-icons/im";
 
-// importing images
+// importing images banking
+import bankingAnalytics from '../../assets/banking-analytics.png';
+import bankingCustomer from '../../assets/Customer_Analysis.png';
+import bankingAccounts from '../../assets/Accounts&Cards.png';
+import bankingTransactions from '../../assets/Transaction_Analysis.png';
+import bankingLoans from '../../assets/Loan_Analysis.png';
+
+// importing uber images
 import uberDashboard from '../../assets/uber-dashboard.png';
 import uberAuto from '../../assets/vehicle-auto.png';
 import uberBike from '../../assets/vehicle-bike.png';
@@ -35,10 +42,34 @@ function Projects() {
   const projects = [
     {
   id: 1,
+  title: 'Banking Analytics — End-to-End Analytics',
+  description:
+    'End-to-end banking analytics solution using SQL, Python, Microsoft Fabric, PySpark, Direct Lake, and Power BI to transform raw banking data into business insights.',
+  image: bankingAnalytics,
+  technologies: ['SQL', 'Python', 'Power BI', 'Fabric', 'PySpark'],
+  githubUrl: 'https://github.com/rikshithbommena/banking-analytics-microsoft-fabric',
+  datasetUrl: 'https://github.com/rikshithbommena/Banking-analytics-microsoft-fabric/tree/main/Dataset',
+  category: 'Data Analysis',
+  longDescription:
+    'End-to-end banking analytics project covering data cleaning, SQL analysis, Python EDA, Microsoft Fabric data engineering, Direct Lake semantic modeling, and Power BI reporting. The solution transforms raw banking data into business-ready insights across customers, accounts, cards, transactions, and loans.',
+ multipleImages: [
+  bankingAnalytics,
+  bankingCustomer,
+  bankingAccounts,
+  bankingTransactions,
+  bankingLoans
+],
+},
+    {
+  id: 2,
   title: 'Uber Ride Analytics Dashboard',
   description:
     'Interactive Power BI dashboard analyzing Uber bookings, revenue, cancellations, vehicle performance, and customer insights with dynamic filtering.',
   image: uberDashboard,
+  multipleImages: [
+  uberDashboard,
+  uberAuto,
+],
   technologies: ['Power BI','SQL','DAX','Excel'],
   githubUrl: 'https://github.com/rikshithbommena/Uber-Operations-Dashboard',
   datasetUrl: 'https://github.com/rikshithbommena/Uber-Operations-Dashboard',
@@ -56,7 +87,7 @@ function Projects() {
   ]
 },
     {
-      id: 2,
+      id: 3,
       title: 'Chocolate Industry Analysis',
       description: 'End-to-end analysis of chocolate shipment data to identify sales trends, shipment performance, and regional demand using data cleaning, EDA, and dashboards.',
       image: project1_3,
@@ -68,7 +99,7 @@ function Projects() {
       multipleImages: [ project1_3]
     },
     {
-      id: 3,
+      id: 4,
       title: 'Farmers Market Analysis',
       description: 'Analysis of e-commerce sales data to track revenue, customer behavior, and product performance using SQL queries and interactive dashboards.',
       image: project2_2,
@@ -80,7 +111,7 @@ function Projects() {
       multipleImages: [ project2_2]
     },
     {
-      id: 4,
+      id: 5,
       title: 'Twitter Sentiment Analysis',
       description: 'Analyzes tweets to identify sentiment trends and factors affecting engagement, providing insights into how emotions and context influence social media interactions.',
       image: project3_1,
@@ -166,7 +197,7 @@ function Projects() {
             {selectedProject &&
               <div className='modal-content p-2'>
                 <div>
-                  <Carousel interval={1000}>
+                  <Carousel interval={2000} pause="hover">
                     {selectedProject?.multipleImages.map((imageSlide, index) =>
                       <Carousel.Item key={index}>
                         <img src={imageSlide} alt={selectedProject.title} onError={(e) => e.target.src = defaultProjectImage} className="modal-image mb-4"></img>
